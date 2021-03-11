@@ -46,7 +46,7 @@ namespace DMR
 			try
 			{
 				Settings.smethod_59(base.Controls);
-				Settings.smethod_68(this);
+				Settings.UpdateComponentTextsFromLanguageXmlData(this);
 				this.chkChMark.Checked = Convert.ToBoolean(this.data[37] & 0x10);
 				this.chkTalkback.Checked = Convert.ToBoolean(this.data[37] & 0x80);
 				this.chkEarlyUnmute.Checked = Convert.ToBoolean(this.data[37] & 8);
@@ -216,8 +216,8 @@ namespace DMR
 			this.Font = new Font("Arial", 10f, FontStyle.Regular);
 			base.Name = "VoteScanForm";
 			this.Text = "Vote Scan";
-			base.Load += this.VoteScanForm_Load;
-			base.FormClosing += this.VoteScanForm_FormClosing;
+			base.Load += new EventHandler( this.VoteScanForm_Load);
+			base.FormClosing += new FormClosingEventHandler( this.VoteScanForm_FormClosing);
 			((ISupportInitialize)this.nudPretimeDelay).EndInit();
 			base.ResumeLayout(false);
 			base.PerformLayout();

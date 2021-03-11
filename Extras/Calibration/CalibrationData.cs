@@ -18,9 +18,9 @@ namespace DMR
 		public byte[] UnknownBlock1;// Uknown. Changing any of these values causes Tx power to drop to virtuially zero
 		*/
 
-		public UInt16 DACOscRefTune;// 	DAC word for frequency reference oscillator
+		public Int16 DACOscRefTune;// 	DAC word for frequency reference oscillator
 
-		public byte UnknownBlock2; // Unkown byte E9 on UHF EE on VHF
+		public sbyte Q_MOD2_OFFSET; // Controls DMR Tx freq
 
 		/* Power settings
 		 * UHF 400 to 475 in 5Mhz stps (16 steps)

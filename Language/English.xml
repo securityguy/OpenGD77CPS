@@ -163,9 +163,9 @@
 			</Control>
 		</Controls>
 		<Commons>
-      <Item Id="DisplayHeaderText" Text="Number,Name,Ch Mode,Rx Freq,Tx Freq,Color Code,Repeater Slot,Contact,TG List,Scan List,Rx Tone,Tx Tone"/>
-      <Item Id="ExportHeaderText" Text="Data type,Name,Channel Type,Rx Frequency,Tx Frequency,Color Code,Timeslot,Contact,Contact Type, Contact Id,Rx Group,Scanlist,Zone,RX CTCSS,TX CTCSS,Power,Bandwidth,Rx Only,Squelch,Tx Admit,TOT,TOT Rekey,Tx Signaling,Rx Signaling,Privacy Group,Emergency System,Flags1,Flags2,Flags3,Flags4,RssiThreshold,VoiceEmphasis,TxSignaling,UnmuteRule,RxSignaling,ArtsInterval" />
-    </Commons>
+     <Item Id="DisplayHeaderText" Text="Number,Name,Ch Mode,Rx Freq,Tx Freq,Color Code,Repeater Slot,Contact,TG List,Power,Rx Tone,Tx Tone"/>
+     <Item Id="ExportHeaderText" Text="Data type,Name,Channel Type,Rx Frequency,Tx Frequency,Color Code,Timeslot,Contact,Contact Type, Contact Id,Rx Group,Scanlist,Zone,RX CTCSS,TX CTCSS,Power,Bandwidth,Rx Only,Squelch,Tx Admit,TOT,TOT Rekey,Tx Signaling,Rx Signaling,Privacy Group,Emergency System,Flags1,Flags2,Flags3,Flags4,RssiThreshold,VoiceEmphasis,TxSignaling,UnmuteRule,RxSignaling,ArtsInterval" />
+</Commons>
 	</ChannelsForm>
 	<CommPrgForm Text="">
 		<Controls>
@@ -214,17 +214,17 @@
 			<Item Id="HeaderText" Text="Number,Name,Call ID,Type,Ring Style,Call Receive Tone,Repeater Slot override," />
 		</Commons>
 	</ContactsForm>
-	<DeviceInfoForm Text="Basic Information">
+	<DeviceInfoForm Text="Band limits">
 		<Controls>
 			<Control Id="lblTo1" Text="-" />
 			<Control Id="lblTo2" Text="-" />
-			<Control Id="lblSection1" Text="Frequency Range 1 [MHz]" />
+			<Control Id="lblSection1" Text="UHF band limits [MHz]" />
 			<Control Id="lblDspFwVer" Text="DSP Version" />
 			<Control Id="lblFirmwareVer" Text="Firmware Version" />
 			<Control Id="lblHardwareVer" Text="Hardware Version" />
 			<Control Id="lblCpsSwVer" Text="CPS Version" />
 			<Control Id="lblSn" Text="Serial Number" />
-			<Control Id="lblSection2" Text="Frequency Range 2 [MHz]" />
+			<Control Id="lblSection2" Text="VHF band limits [MHz]" />
 			<Control Id="lblLastPrgTime" Text="Last Programed Date" />
 			<Control Id="lblModel" Text="Model Name" />
 		</Controls>
@@ -310,7 +310,7 @@
 			<Item Id="EncryptType" Text="None,Basic" />
 		</Commons>
 	</EncryptForm>
-	<GeneralSetForm Text="General Settings">
+	<GeneralSetForm Text="DMR ID and callsign">
 		<Controls>
 			<Control Id="chkTxExitTone" Text="Tx Exit Tone" />
 			<Control Id="grpBeep" Text="Alert Tone" />
@@ -365,14 +365,14 @@
 	<HelpForm Text="HelpView">
 		<Controls />
 	</HelpForm>
-	<MainForm Text="Radioddity GD-77 CPS 3.0.6 Community Edition">
+	<MainForm Text="OpenGD77 CPS">
 		<TreeView>
 			<TreeNode Id="Model" Text="GD-77" />
-			<TreeNode Id="BasicInfo" Text="Basic Information" />
+			<TreeNode Id="BasicInfo" Text="Band limits" />
 			<TreeNode Id="BootItem" Text="Boot screen" />
 			<TreeNode Id="Menu" Text="Menu" />
 			<TreeNode Id="NumKeyAssign" Text="Number Key Assign" />
-			<TreeNode Id="GeneralSetting" Text="General Settings" />
+			<TreeNode Id="GeneralSetting" Text="DMR ID and callsign" />
 			<TreeNode Id="Buttons" Text="Buttons" />
 			<TreeNode Id="TextMsg" Text="Text Message" />
 			<TreeNode Id="Pivacy" Text="Privacy" />
@@ -397,11 +397,11 @@
 			<MenuItem Id="tsmiOpen" Text="Open" />
 			<MenuItem Id="tsmiExit" Text="Exit" />
 			<MenuItem Id="tsmiSetting" Text="Setting" />
-			<MenuItem Id="tsmiDeviceInfo" Text="Basic Information" />
+			<MenuItem Id="tsmiDeviceInfo" Text="Band limits" />
 			<MenuItem Id="tsmiBootItem" Text="Boot screen" />
 			<MenuItem Id="tsmiMenu" Text="Menu" />
 			<MenuItem Id="tsmiNumKeyContact" Text="Number Key Assign" />
-			<MenuItem Id="tsmiGerneralSet" Text="General Settings" />
+			<MenuItem Id="tsmiGerneralSet" Text="DMR ID and callsign" />
 			<MenuItem Id="tsmiButton" Text="Buttons" />
 			<MenuItem Id="tsmiTextMsg" Text="Text Message" />
 			<MenuItem Id="tsmiEncrypt" Text="Privacy" />
@@ -842,7 +842,155 @@
       <Control Id="btnClear" Text="Clear" />      
     </Controls>
   </DMRIDForm>
-	<Commons>
+  <OpenGD77Form Text="OpenGD77 Support">
+    <Controls>
+      <Control Id="btnBackupEEPROM" Text="Backup EEPROM" />
+      <Control Id="btnBackupFlash" Text="Backup Flash" />
+      <Control Id="btnRestoreEEPROM" Text="Restore EEPROM" />
+      <Control Id="btnRestoreFlash" Text="Restore Flash" />
+      <Control Id="btnReadCodeplug" Text="Read codeplug" />
+      <Control Id="btnWriteCodeplug" Text="Write codeplug" />
+      <Control Id="btnBackupCalibration" Text="Backup Calibration" />
+      <Control Id="btnRestoreCalibration" Text="Restore Calibration" />
+      <Control Id="btnBackupMCUROM" Text="Backup MCU ROM" />
+      <Control Id="btnDownloadScreenGrab" Text="Download screengrab" />
+      <Control Id="btnOpenFile" Text="Select boot image" />
+      <Control Id="txtBootTune" Text="38,6,0,2,38,2,0,2,38,6,0,2,38,2,0,2,38,6" />
+      <Control Id="grpFunThings" Text="Fun things" />
+      <Control Id="btnPlayTune" Text="Play tune" />
+      <Control Id="lblBootTune" Text="Boot melody" />
+      <Control Id="btnWriteVoicePrompts" Text="Write voice prompts" />
+    </Controls>
+    <Commons>
+        <Item Id="Error_connecting_to_the_radio" Text="Error connecting to the radio" />
+        <Item Id="Comm_port_not_available" Text="Comm port not available" />
+        <Item Id="Writing_EEPROM" Text="Writing EEPROM" />
+        <Item Id="Error_while_writing" Text="Error while writing" />
+        <Item Id="Writing_Flash" Text="Writing Flash" />
+        <Item Id="Codeplug_write_complete" Text="Codeplug write complete" />
+        <Item Id="Reading_MCU_ROM" Text="Reading MCU ROM" />
+        <Item Id="Error_while_reading_MCU_ROM" Text="Error while reading MCU ROM" />
+        <Item Id="Downloading_Screengrab" Text="Downloading Screengrab" />
+        <Item Id="Writing_Voice_prompts" Text="Writing voice prompts" />
+        <Item Id="Upload_complete" Text="Upload complete" />
+        <Item Id="No_com_port" Text="No com port. Close and reopen the OpenGD77 window to select a com port Are you sure you want to restore the EEPROM from a previously saved file?" />
+        <Item Id="Warning" Text="Warning" />
+        <Item Id="The_file_is_not_the_correct_size." Text="The file is not the correct size." />
+        <Item Id="Are_you_sure_you_want_to_restore_the_Calibartion_from_a_previously_saved_file" Text="Are you sure you want to restore the Calibartion from a previously saved file?" />
+        <Item Id="Calibration_files" Text="Calibration files" />
+        <Item Id="Invalid_Calibration_data" Text="Invalid Calibration data" />
+        <Item Id="Are_you_sure_you_want_to_restore_the_Flash_memory_from_a_previously_saved_file" Text="Are you sure you want to restore the Flash memory from a previously saved file?" />
+        <Item Id="Flash_backup_files" Text="Flash backup files" />
+        <Item Id="This_file_is_not_a_full_backup" Text="This file is not a full backup \n Do you want restore the contents of this file?" />
+        <Item Id="Please_connect_the_radio,_and_try_again." Text="Please connect the radio, and try again" />
+        <Item Id="Failed_to_open_comm_port" Text="Failed to open comm port" />
+        <Item Id="Voice_prompt_files" Text="Voice prompt files" />
+        <Item Id="read_stopped" Text="Error. Read stopped (error at {0:X8})" />
+        <Item Id="write_stopped" Text="Error. Write stopped (error at {0:X8})" />
+        <Item Id="AMB_files" Text="AMB files" />
+        <Item Id="Oops" Text="Oops" />
+        <Item Id="RADIO_DISPLAY_CPS" Text="CPS" />
+        <Item Id="RADIO_DISPLAY_Backup" Text="Backup" />
+        <Item Id="RADIO_DISPLAY_Calibration" Text="Calibration" />
+        <Item Id="RADIO_DISPLAY_EEPROM" Text="EEPROM" />
+        <Item Id="RADIO_DISPLAY_Flash" Text="Flash" />
+        <Item Id="RADIO_DISPLAY_Codeplug" Text="Codeplug" />
+        <Item Id="RADIO_DISPLAY_MCU_ROM" Text="MCU ROM" />
+        <Item Id="RADIO_DISPLAY_Voice_prompts" Text="Voice prompts" />
+        <Item Id="RADIO_DISPLAY_Restoring" Text="Restoring" />
+        <Item Id="RADIO_DISPLAY_Reading" Text="Reading" />
+        <Item Id="RADIO_DISPLAY_Writing" Text="Writing" />
+        <Item Id="Reading_EEPROM" Text="Reading EEPROM" />
+        <Item Id="Reading_Flash" Text="Reading Flash" />
+        <Item Id="Writing_EEPROM" Text="Writing EEPROM" />
+        <Item Id="Writing_Flash" Text="Writing Flash" />
+        <Item Id="Error" Text="Error" />
+        <Item Id="Warning" Text="Warning" />
+		<Item Id="Calibration_data_could_not_be_found._Please_update_your_firmware" Text="Calibration data could not be found. Please update your firmware" />
+		<Item Id="There_has_been_an_error._Refer_to_the_last_status_message_that_was_displayed" Text="There has been an error. Refer to the last status message that was displayed" />
+        <Item Id="EEPROM_files" Text="EEPROM files" />
+        <Item Id="Flash_files" Text="Flash files" />
+        <Item Id="Restore_complete" Text="Restore complete" />
+        <Item Id="Read_Codeplug_complete" Text="Read Codeplug complete" />
+        <Item Id="Screengrab_files" Text="Screengrab files" />
+        <Item Id="Error_while_reading_flash" Text="Error while reading Flash" />
+        <Item Id="Reading_Calibration" Text="Reading Calibration" />
+        <Item Id="Error_while_reading_calibration" Text="Error while reading calibration" />
+        <Item Id="Error_while_reading_EEPROM" Text="Error while reading EEPROM" />
+        <Item Id="Restoring_Flash" Text="Restoring Flash" />
+        <Item Id="Error_while_restoring" Text="Error while restoring" />
+        <Item Id="Restoring_Calibration" Text="Restoring Calibration" />
+        <Item Id="Error_while_restoring_Calibration" Text="Error while restoring Calibration" />
+        <Item Id="Restoring_EEPROM" Text="Restoring EEPROM" />
+        <Item Id="Error_while_reading" Text="Error while reading" />
+        <Item Id="Codeplug_read_complete" Text="Codeplug read complete" />
+        <Item Id="Reading_MCU_ROM" Text="Reading MCU ROM" />
+        <Item Id="Error_while_Reading_MCU_ROM" Text="Error while Reading MCU ROM" />
+        <Item Id="Error_while_downloading_Screengrab" Text="Error while downloading Screengrab" />
+        <Item Id="Are_you_sure_you_want_to_restore_the_EEPROM_from_a_previously_saved_file" Text="Are you sure you want to restore the EEPROM from a previously saved file?" />
+        <Item Id="PNG_image_files" Text="PNG image files" />
+        <Item Id="MCU_ROM_files" Text="MCU ROM files" />
+      </Commons>       
+	  
+  </OpenGD77Form>
+  <FirmwareLoaderUI Text="Firmware Loader">
+    <Controls>
+				<Control Id="btnDetectModel" Text="Detect Radio Type" />
+				<Control Id="grpboxProgress" Text="  Progress " />
+				<Control Id="btnClose"		Text="&amp;Close" />
+				<Control Id="btnDownloadFirmware" Text="&amp;Download &amp;&amp; Update" />
+				<Control Id="btnUploadFirmware" Text="Select a &amp;File &amp;&amp; Update" />
+				<Control Id="grpboxModel" Text="Select your radio type " />
+      </Controls>
+    <Commons>
+      <Item Id="CantInterrupt" Text="You can't interrupt the upload process" />
+      <Item Id="DownloadCancelled" Text="Download has been canceled." />
+      <Item Id="Timeout" Text="Timeout" />
+      <Item Id="Error" Text="Error" />
+      <Item Id="No_file_location_specified" Text="No file location specified" />
+      <Item Id="Error:_Unable_to_detect_your_radio." Text="Error: Unable to detect your radio." />
+      <Item Id="Uploading_firmware_to" Text="Uploading firmware to " />
+      <Item Id="Error_sending_data" Text="Error sending data" />
+      <Item Id="Error_sending_checksum" Text="Error sending checksum" />
+      <Item Id="Sending_Download_command" Text="Sending Download command" />
+      <Item Id="Sending_ACK" Text="Sending ACK" />
+      <Item Id="Sending_encryption_key" Text="Sending encryption key" />
+      <Item Id="Sending_F-PROG_command" Text="Sending F-PROG command" />
+      <Item Id="Sending_radio_modem_number" Text="Sending radio modem number" />
+      <Item Id="Sending_radio_modem_number_2" Text="Sending radio modem number 2" />
+      <Item Id="Sending_version" Text="Sending version" />
+      <Item Id="Sending_erase_command" Text="Sending erase command" />
+      <Item Id="Send_post_erase_command" Text="Send post erase command" />
+      <Item Id="Sending_Program_command" Text="Sending Program command" />
+      <Item Id="Error_sending_command" Text="Error sending command "/>
+      <Item Id="ERROR:_SGL!_header_missing." Text="ERROR: SGL! header missing." />
+      <Item Id="Stable" Text="Stable" />
+			<Item Id="Beta" Text="Beta" />
+      <Item Id="Error._Cant_connect_to_the" Text="Error. Can't connect to the" />
+      <Item Id="Error._Missing_SGL!_in_.sgl_file_header" Text="Error. Missing SGL! in .sgl file header" />
+      <Item Id="Error._The_firmware_doesnt_match the_transceiver_model." Text="Error. The firmware doesn't match the transceiver model." />
+      <Item Id="Firmware_file_is_unencrypted_binary" Text="Firmware file is unencrypted binary" />
+      <Item Id="Error._Firmware_file_too_large" Text="Error. Firmware file too large." />
+      <Item Id="Firmware_update_complete" Text="Firmware update complete. Please reboot the radio" />
+      <Item Id="While_sending_data_file" Text="While sending data file" />
+      <Item Id="Error_while_sending_initial_commands._Is_the_{0}_in_firmware_update_mode?" Text="Error while sending initial commands. Is the {0} in firmware update mode?" />
+      <Item Id="Error_read_returned" Text="Error read returned " />
+      <Item Id="Firmware_file_confirmed_as_SGL" Text="Firmware file confirmed as SGL" />
+      <Item Id="Success" Text="Success" />
+    </Commons>
+    </FirmwareLoaderUI>
+  
+  <FirmwareLoaderReleasesList Text="Select release version">
+    <Controls>
+      <Control Id="btnDetectModel" Text="Detect Radio Type" />
+      <Control Id="releasesGridView" Text="Date &amp; Time,Version,Type,Release Name,Downloads"/>
+      <Control Id="btnDown" Text=" Select &amp;&amp; continue"/>
+      <Control Id="btnCancel" Text=" Cancel"/>
+    </Controls>
+  </FirmwareLoaderReleasesList>
+
+
+  <Commons>
 		<Item Id="None" Text="None" />
 		<Item Id="Selected" Text="Selected" />
 		<Item Id="RadioIdNotEmpty" Text="Radio ID can not be empty!" />

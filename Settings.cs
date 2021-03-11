@@ -21,7 +21,6 @@ internal class Settings
 		Basic,
 		Expert
 	}
-
 	public const string SZ_PWD = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\b";
 	public const string SZ_HEX = "0123456789ABCDEF";
 	public const string SZ_ATTRIBUTE_NAME = "Id";
@@ -44,143 +43,82 @@ internal class Settings
 	public const string SZ_KEYPRESS_PRINT_N = "KeyPressPrint";
 	public const string SZ_DATA_FORMAT_ERROR_N = "DataFormatError";
 	public const string SZ_FIRST_CH_NOT_DELETE_NAME = "FirstChNotDelete";
-
 	public const string SZ_FIRST_NOT_DELETE_N = "FirstNotDelete";
-
 	public const string SZ_NAME_EXIST = "Name exists";
-
 	public const string SZ_FILE_FORMAT_ERROR_N = "FileFormatError";
-
 	public const string SZ_OPEN_SUCCESSFULLY_N = "OpenSuccessfully";
-
 	public const string SZ_SAVE_SUCCESSFULLY_N = "SaveSuccessfully";
-
 	public const string SZ_TYPE_NOT_MATCH_N = "TypeNotMatch";
-
 	public const string SZ_EXPORT_SUCCESS_N = "ExportSuccess";
-
 	public const string SZ_IMPORT_SUCCESS_N = "ImportSuccess";
-
 	public const string SZ_ID_NOT_EMPTY_N = "IdNotEmpty";
-
 	public const string SZ_ID_OUT_OF_RANGE_N = "IdOutOfRange";
-
 	public const string SZ_ID_ALREADY_EXISTS_N = "IdAlreadyExists";
-
 	public const string SZ_NOT_SELECT_ITEM_NOT_COPYITEM_NAME = "NotSelectItemNotCopyItem";
-
 	public const string SZ_PROMPT_KEY1_NAME = "PromptKey1";
-
 	public const string SZ_PROMPT_KEY2_NAME = "PromptKey2";
-
 	public const string SZ_APP_SCAN_SELECTED_NAME = "ScanSelected";
-
 	public const string SZ_UNABLE = "Unable to operate selected";
-
 	public const string SZ_PROMPT_NAME = "Prompt";
-
 	public const string SZ_ERROR_NAME = "Error";
-
 	public const string SZ_WARNING_NAME = "Warning";
-
 	public const int FREQ_STEP_1 = 250;
-
 	public const int FREQ_STEP_2 = 625;
-
 	public const string SUPER_PWD = "DT8168";
-
 	public const int LEN_NAME_MCU = 15;
 
 	private static UserMode curUserMode;
-
 	public static readonly byte[] CUR_MODEL;
-
 	public static string SZ_NONE;
-
+	public static string SZ_NA;
 	public static string SZ_SELECTED;
-
 	public static string SZ_ADD;
-
 	public static string SZ_OFF;
-
 	public static string SZ_DEVICE_NOT_FOUND;
-
 	public static string SZ_OPEN_PORT_FAIL;
-
 	public static string SZ_COMM_ERROR;
-
 	public static string SZ_MODEL_NOT_MATCH;
-
 	public static string SZ_READ;
-
 	public static string SZ_WRITE;
-
 	public static string SZ_READ_COMPLETE;
-
 	public static string SZ_WRITE_COMPLETE;
 
     public static string SZ_CODEPLUG_READ_CONFIRM;
     public static string SZ_CODEPLUG_WRITE_CONFIRM;
 	public static string SZ_PLEASE_CONFIRM;
 	public static string SZ_USER_AGREEMENT = "This software is supplied 'as is' with no warranties. You use it at your own risk to both your PC and to your DMR Radio. By pressing the  Yes   button you agree and understand.";
-
 	public static string SZ_KEYPRESS_DTMF;
-
 	public static string SZ_KEYPRESS_HEX;
-
 	public static string SZ_KEYPRESS_DIGIT;
-
 	public static string SZ_KEYPRESS_PRINT;
-
 	public static string SZ_DATA_FORMAT_ERROR;
-
 	public static string SZ_FIRST_CH_NOT_DELETE;
-
 	public static string SZ_FIRST_NOT_DELETE;
-
 	public static string SZ_NAME_EXIST_NAME;
-
 	public static string SZ_FILE_FORMAT_ERROR;
-
 	public static string SZ_OPEN_SUCCESSFULLY;
-
 	public static string SZ_SAVE_SUCCESSFULLY;
-
 	public static string SZ_TYPE_NOT_MATCH;
-
 	public static string SZ_EXPORT_SUCCESS;
-
 	public static string SZ_IMPORT_SUCCESS;
-
 	public static string SZ_ID_NOT_EMPTY;
-
 	public static string SZ_ID_OUT_OF_RANGE;
-
 	public static string SZ_ID_ALREADY_EXISTS;
-
 	public static string SZ_NOT_SELECT_ITEM_NOT_COPYITEM;
-
 	public static string SZ_PROMPT_KEY1;
-
 	public static string SZ_PROMPT_KEY2;
-
 	public static string SZ_PROMPT;
-
 	public static string SZ_ERROR;
-
 	public static string SZ_WARNING;
 	public static string SZ_DOWNLOADCONTACTS_REGION_EMPTY = "Please enter the 3 digit Region previx code. e.g. 505 for Australia.";
 	public static string SZ_DOWNLOADCONTACTS_MESSAGE_ADDED = "There are {0} new ID's which are not already in your contacts";
 	public static string SZ_DOWNLOADCONTACTS_DOWNLOADING = "Downloading...";
-
 	public static string SZ_DOWNLOADCONTACTS_SELECT_CONTACTS_TO_IMPORT = "Please select the contacts you would like to import";
 	public static string SZ_DOWNLOADCONTACTS_TOO_MANY = "Not all contacts could be imported because the maximum number of Digital Contacts has been reached";
 	public static string SZ_UNABLEDOWNLOADFROMINTERNET = "Unable to download data. Please check your Internet connection";
 	public static string SZ_IMPORT_COMPLETE = "Import complete";
-
 	public static string SZ_CODEPLUG_UPGRADE_NOTICE = "This appears to be a V3.0.6 Codeplug. It will be converted to V3.1.x";
 	public static string SZ_CODEPLUG_UPGRADE_WARNING_TO_MANY_RX_GROUPS = "Version 3.1.x can only have 76 Rx Groups. Additional Rx Groups have been ignored";
-
 	public static string SZ_CODEPLUG_READ = "Reading codeplug from GD-77";
 	public static string SZ_CODEPLUG_WRITE = "Writing codeplug to GD-77";
 	public static string SZ_DMRID_READ = "Reading DMR ID database from GD-77";
@@ -188,225 +126,117 @@ internal class Settings
 	public static string SZ_CALIBRATION_READ = "Reading calibration data from GD-77";
 	public static string SZ_CALIBRATION_WRITE = "Writing calibration data to GD-77";
 	public static string SZ_CONTACT_DUPLICATE_NAME = "Warning. Duplicate contact name.";
-
 	public static string SZ_EnableMemoryAccessMode = "The GD-77 does not seem to be in Memory Access mode\nHold keys SK2 (Blue side key), Green Menu and * when turning on the transceiver.\nand try again";
     public static string SZ_dataRead = "Reading data from GD-77";
     public static string SZ_dataWrite  ="Writing data to GD-77";
     public static string SZ_DMRIdContcatsTotal = "Total number of IDs = {0}. Max of 10920 can be uploaded";
     public static string SZ_ErrorParsingData = "Error while parsing data";
     public static string SZ_DMRIdIntroMessage = "Data is downloaded from Ham-digital.org and appended any existing data";
-
-
-
 	public static int CUR_MODE;
-
-	public static uint[] MIN_FREQ;
-
-	public static uint[] MAX_FREQ;
-
+	public static readonly uint[] MIN_FREQ;
+	public static readonly uint[] MAX_FREQ;
 	public static readonly uint[] VALID_MIN_FREQ;
-
 	public static readonly uint[] VALID_MAX_FREQ;
-
 	public static int CUR_CH_GROUP;
-
 	public static int CUR_ZONE_GROUP;
-
 	public static int CUR_ZONE;
-
 	public static string CUR_PWD;
-
 	public static readonly uint EEROM_SPACE = 0x20000;//0x40000; // Increased to 256k (0x40000) to store DMR ID as well as codeplug   0x20000;// 0131072u;
-
 	public static readonly int SPACE_DEVICE_INFO;
-
 	public static readonly int ADDR_DEVICE_INFO;
-
 	public static readonly int OFS_LAST_PRG_TIME;
-
 	public static readonly int OFS_CPS_SW_VER;
-
 	public static readonly int OFS_MODEL;
-
 	public static readonly int SPACE_GENERAL_SET;
-
 	public static readonly int ADDR_GENERAL_SET;
-
 	public static readonly int ADDR_PWD;
-
 	public static readonly int SPACE_BUTTON;
-
 	public static readonly int ADDR_BUTTON;
-
 	public static readonly int SPACE_ONE_TOUCH;
-
 	public static readonly int ADDR_ONE_TOUCH;
-
 	public static readonly int SPACE_TEXT_MSG;
-
 	public static readonly int ADDR_TEXT_MSG;
-
 	public static readonly int SPACE_ENCRYPT;
-
 	public static readonly int ADDR_ENCRYPT;
-
 	public static readonly int SPACE_SIGNALING_BASIC;
-
 	public static readonly int ADDR_SIGNALING_BASIC;
-
 	public static readonly int SPACE_DTMF_BASIC;
-
 	public static readonly int ADDR_DTMF_BASIC;
-
 	public static readonly int SPACE_EMG_SYSTEM;
-
 	public static readonly int ADDR_EMG_SYSTEM;
-
 	public static readonly int SPACE_DMR_CONTACT;
-
 	public static readonly int ADDR_DMR_CONTACT;
-
 	public static readonly int SPACE_DMR_CONTACT_EX;
-
 	public static readonly int ADDR_DMR_CONTACT_EX;
-
 	public static readonly int SPACE_DTMF_CONTACT;
-
 	public static readonly int ADDR_DTMF_CONTACT;
-
 	public static readonly int SPACE_RX_GRP_LIST;
-
-	//public static readonly int ADDR_RX_GRP_LIST;
-
 	public static readonly int ADDR_RX_GRP_LIST_EX;
-
 	public static readonly int ADDR_ZONE_BASIC;
-
 	public static readonly int ADDR_ZONE_LIST;
-
 	public static readonly int ADDR_CHANNEL;
-
 	public static readonly int SPACE_SCAN_BASIC;
-
 	public static readonly int ADDR_SCAN;
-
 	public static readonly int SPACE_SCAN_LIST;
-
 	public static readonly int ADDR_SCAN_LIST;
-
 	public static readonly int SPACE_BOOT_ITEM;
-
 	public static readonly int ADDR_BOOT_ITEM;
-
 	public static readonly int SPACE_DIGITAL_KEY_CONTACT;
-
 	public static readonly int ADDR_DIGITAL_KEY_CONTACT;
-
 	public static readonly int SPACE_MENU_CONFIG;
-
 	public static readonly int ADDR_MENU_CONFIG;
-
 	public static readonly int SPACE_BOOT_CONTENT;
-
 	public static readonly int ADDR_BOOT_CONTENT;
-
 	public static readonly int SPACE_ATTACHMENT;
-
 	public static readonly int ADDR_ATTACHMENT;
-
 	public static readonly int SPACE_VFO;
-
 	public static readonly int ADDR_VFO;
-
 	public static readonly int SPACE_EX_ZONE;
-
 	public static readonly int ADDR_EX_ZONE;
-
 	public static readonly int ADDR_EX_ZONE_BASIC;
-
 	public static readonly int ADDR_EX_ZONE_LIST;
-
 	public static readonly int SPACE_EX_SCAN;
-
 	public static readonly int ADDR_EX_SCAN;
-
 	public static readonly int ADDR_EX_SCAN_PRI_CH1;
-
 	public static readonly int ADDR_EX_SCAN_PRI_CH2;
-
 	public static readonly int ADDR_EX_SCAN_SPECIFY_CH;
-
 	public static readonly int ADDR_EX_SCAN_CH_LIST;
-
 	public static readonly int SPACE_EX_EMERGENCY;
-
 	public static readonly int ADDR_EX_EMERGENCY;
-
 	public static readonly int SPACE_EX_CH;
-
 	public static readonly int ADDR_EX_CH;
-
 	public static readonly int ADDR_UNUSED_START = 0x1EE60;
-
-	public static Dictionary<string, string> dicCommon;
-   // static string _003CLangXml_003Ek__BackingField;
+	public static Dictionary<string, string> dicCommon = new Dictionary<string, string>();
 	private static XmlDocument _languageXML=null;
-
-
+	public static string LanguageFile="";
 	public static XmlDocument languageXML
 	{
 		get { return _languageXML; }
 	}
-
 	public static void setLanguageXMLFile(string xmlFile)
 	{
+		Settings.LanguageFile = Path.GetFileName(xmlFile);
 		_languageXML = new XmlDocument();
 		_languageXML.Load(xmlFile);
 	}
 
-	/*
-	[CompilerGenerated]
-	public static string smethod_0()
-	{
 
-		return Settings._003CLangXml_003Ek__BackingField;
-	}
-
-	
+    static string HelpFilename;
 	[CompilerGenerated]
-	public static void smethod_1(string string_0)
+	public static string GetHelpFilename()
 	{
-		if (string_0 != null)
-		{
-			Settings._003CLangXml_003Ek__BackingField = string_0;
-		}
-		//debugging only
-		//else
-		//{
-		//	System.Diagnostics.StackTrace t = new System.Diagnostics.StackTrace();
-		//	MessageBox.Show(t.ToString(),"Warning. Code attempted to set language xml path to null");
-		//}
-	}
-	 */
-    static string _003CLangChm_003Ek__BackingField;
-	[CompilerGenerated]
-	public static string smethod_2()
-	{
-		return Settings._003CLangChm_003Ek__BackingField;
+		return Settings.HelpFilename;
 	}
 
 	[CompilerGenerated]
-	public static void smethod_3(string string_0)
+	public static void SetHelpFilename(string string_0)
 	{
-		Settings._003CLangChm_003Ek__BackingField = string_0;
+		Settings.HelpFilename = string_0;// "";
 	}
-
 	public static UserMode getUserExpertSettings()
 	{
 		return Settings.UserMode.Expert;
-//		return Settings.curUserMode;
 	}
-
 	public static void smethod_5(UserMode userMode_0)
 	{
 		Settings.curUserMode = userMode_0;
@@ -437,7 +267,6 @@ internal class Settings
 	{
 		Settings._003CCurUserPwd_003Ek__BackingField = string_0;
 	}
-
 	public static void smethod_10()
 	{
 		Settings.smethod_76("None", ref Settings.SZ_NONE);
@@ -448,8 +277,8 @@ internal class Settings
 		Settings.smethod_76("CommError", ref Settings.SZ_COMM_ERROR);
 		Settings.smethod_76("Model does not match", ref Settings.SZ_MODEL_NOT_MATCH);
 		Settings.smethod_76("DataFormatError", ref Settings.SZ_DATA_FORMAT_ERROR);
+		Settings.smethod_76("N/A", ref Settings.SZ_NA);
 	}
-
 	public static void smethod_11(ref byte byte_0, byte byte_1, byte byte_2, byte byte_3)
 	{
 		if (!Settings.smethod_12(byte_0, byte_1, byte_2))
@@ -457,7 +286,6 @@ internal class Settings
 			byte_0 = byte_3;
 		}
 	}
-
 	public static bool smethod_12(byte byte_0, byte byte_1, byte byte_2)
 	{
 		if (byte_0 >= byte_1 && byte_0 <= byte_2)
@@ -466,7 +294,6 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static bool smethod_13(int int_0, int int_1, int int_2)
 	{
 		if (int_0 >= int_1 && int_0 <= int_2)
@@ -475,32 +302,27 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static int smethod_14(byte byte_0, int int_0, int int_1)
 	{
 		int num = (int)Math.Pow(2.0, (double)int_1) - 1;
 		return byte_0 >> int_0 & num;
 	}
-
 	public static void smethod_15(ref byte byte_0, int int_0, int int_1)
 	{
 		int num = (int)Math.Pow(2.0, (double)int_1) - 1;
 		byte_0 &= (byte)(~(num << int_0));
 	}
-
 	public static void smethod_16(ref byte byte_0, int int_0, int int_1, int int_2)
 	{
 		int num = (int)Math.Pow(2.0, (double)int_1) - 1;
 		byte_0 &= (byte)(~(num << int_0));
 		byte_0 |= (byte)((int_2 & num) << int_0);
 	}
-
 	public static void smethod_17(ref ushort ushort_0, int int_0, int int_1)
 	{
 		int num = (int)Math.Pow(2.0, (double)int_1) - 1;
 		ushort_0 &= (ushort)(~(num << int_0));
 	}
-
 	public static bool smethod_18(byte[] byte_0, byte[] byte_1, int int_0)
 	{
 		if (byte_0.Length < int_0)
@@ -527,7 +349,6 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static int smethod_19(double double_0, ref uint uint_0)
 	{
 		int num = 0;
@@ -572,7 +393,6 @@ internal class Settings
 		}
 		return num;
 	}
-
 	public static int smethod_20(double double_0, double double_1)
 	{
 		int num = 0;
@@ -606,7 +426,6 @@ internal class Settings
 		}
 		return -1;
 	}
-
 	public static int smethod_21(uint uint_0, ref int int_0)
 	{
 		int num = 0;
@@ -631,7 +450,6 @@ internal class Settings
 		}
 		return num;
 	}
-
 	public static int smethod_22(double double_0, double double_1)
 	{
 		int num = 0;
@@ -665,12 +483,10 @@ internal class Settings
 		}
 		return -1;
 	}
-
 	public static byte[] smethod_23(string string_0)
 	{
 		return Settings.smethod_24(string_0, "gb2312");
 	}
-
 	public static byte[] smethod_24(string string_0, string string_1)
 	{
 		Encoding encoding = Encoding.GetEncoding(string_1);
@@ -680,12 +496,10 @@ internal class Settings
 		}
 		return encoding.GetBytes(string_0);
 	}
-
 	public static string smethod_25(byte[] byte_0)
 	{
 		return Settings.smethod_26(byte_0, "gb2312");
 	}
-
 	public static string smethod_26(byte[] byte_0, string string_0)
 	{
 		Encoding encoding = Encoding.GetEncoding(string_0);
@@ -704,21 +518,18 @@ internal class Settings
 		}
 		return encoding.GetString(byte_0, 0, num);
 	}
-
 	public static int smethod_27(double double_0, double double_1)
 	{
 		decimal d = Convert.ToDecimal(double_0);
 		decimal d2 = Convert.ToDecimal(double_1);
 		return Convert.ToInt32(d * d2);
 	}
-
 	public static double smethod_28(int int_0, int int_1)
 	{
 		decimal d = Convert.ToDecimal(int_0);
 		decimal d2 = Convert.ToDecimal(int_1);
 		return Convert.ToDouble(d / d2);
 	}
-
 	public static void smethod_29(ref int int_0, int int_1, int int_2)
 	{
 		int num = int_0 % int_1;
@@ -737,7 +548,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_30(ref int int_0, int int_1, int int_2)
 	{
 		int num = 1;
@@ -771,7 +581,6 @@ internal class Settings
 			int_0 += num2;
 		}
 	}
-
 	public static void smethod_31(ref int int_0)
 	{
 		int num = int_0 % 625;
@@ -795,7 +604,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static ushort smethod_32(ushort ushort_0)
 	{
 		int num = 0;
@@ -809,7 +617,6 @@ internal class Settings
 		}
 		return num3;
 	}
-
 	public static ushort smethod_33(ushort ushort_0)
 	{
 		int num = 0;
@@ -823,7 +630,6 @@ internal class Settings
 		}
 		return num3;
 	}
-
 	public static uint smethod_34(uint uint_0)
 	{
 		int num = 0;
@@ -837,7 +643,6 @@ internal class Settings
 		}
 		return num3;
 	}
-
 	public static uint smethod_35(uint uint_0)
 	{
 		int num = 0;
@@ -851,7 +656,6 @@ internal class Settings
 		}
 		return num3;
 	}
-
 	public static void smethod_36(CustomNumericUpDown class12_0, Class13 class13_0)
 	{
 		if (class13_0.method_6() < 0m)
@@ -868,7 +672,6 @@ internal class Settings
 		}
 		class12_0.method_0(class13_0.method_8());
 	}
-
 	public static void smethod_37(ComboBox comboBox_0, string[] string_0)
 	{
 		int num = 0;
@@ -878,7 +681,6 @@ internal class Settings
 			comboBox_0.Items.Add(string_0[num]);
 		}
 	}
-
 	public static void smethod_38(ComboBox comboBox_0, string[] string_0, int int_0)
 	{
 		int num = 0;
@@ -889,7 +691,6 @@ internal class Settings
 			comboBox_0.Items.Add(string_0[num]);
 		}
 	}
-
 	public static void smethod_39(CustomCombo class4_0, string[] string_0)
 	{
 		int num = 0;
@@ -899,7 +700,6 @@ internal class Settings
 			class4_0.method_1(string_, num++);
 		}
 	}
-
 	public static void smethod_40(CustomCombo class4_0, string[] string_0, int[] int_0)
 	{
 		class4_0.method_0();
@@ -908,7 +708,6 @@ internal class Settings
 			class4_0.method_1(string_0[num], num);
 		}
 	}
-
 	public static void smethod_41(ComboBox comboBox_0, int int_0, int int_1)
 	{
 		int num = 0;
@@ -918,7 +717,6 @@ internal class Settings
 			comboBox_0.Items.Add(num);
 		}
 	}
-
 	public static void smethod_42(ComboBox comboBox_0, string string_0, int int_0, int int_1)
 	{
 		int num = 0;
@@ -929,7 +727,6 @@ internal class Settings
 			comboBox_0.Items.Add(num);
 		}
 	}
-
 	public static void smethod_43(ComboBox comboBox_0, int int_0, int int_1, int int_2, string string_0)
 	{
 		int i = 0;
@@ -946,13 +743,19 @@ internal class Settings
 			}
 		}
 	}
-
-	public static void smethod_44(CustomCombo class4_0, IData idata_0)
+	public static void smethod_44(CustomCombo class4_0, IData idata_0, string noneText=null)
 	{
 		int num = 0;
 		string text = "";
 		class4_0.method_0();
-		class4_0.method_1(Settings.SZ_NONE, 0);
+		if (noneText == null)
+		{
+			class4_0.method_1(Settings.SZ_NONE, 0);
+		}
+		else
+		{
+			class4_0.method_1(noneText, 0);
+		}
 		for (num = 0; num < idata_0.Count; num++)
 		{
 			if (idata_0.DataIsValid(num))
@@ -962,7 +765,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_45(CustomCombo class4_0, string[] string_0, IData idata_0)
 	{
 		int num = 0;
@@ -981,7 +783,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_46(CustomCombo class4_0, string[] string_0, ListBox listBox_0)
 	{
 		int num = 0;
@@ -1001,7 +802,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static int smethod_47(ListBox listBox_0, SelectedItemUtils class14_0)
 	{
 		int num = 0;
@@ -1022,7 +822,6 @@ internal class Settings
 		}
 		return num;
 	}
-
 	public static void smethod_48(TreeNode treeNode_0, int int_0)
 	{
 		if (int_0 >= treeNode_0.Level)
@@ -1034,7 +833,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_49(TreeView treeView_0, int int_0)
 	{
 		foreach (TreeNode node in treeView_0.Nodes)
@@ -1042,7 +840,6 @@ internal class Settings
 			Settings.smethod_48(node, int_0);
 		}
 	}
-
 	public static bool smethod_50(TreeNode treeNode_0, string string_0)
 	{
 		if (string.IsNullOrEmpty(string_0))
@@ -1058,7 +855,6 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static bool smethod_51(TreeNode treeNode_0, string string_0)
 	{
 		if (string.IsNullOrEmpty(string_0))
@@ -1074,7 +870,6 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static void smethod_52(object sender, DataGridViewCellEventArgs e)
 	{
 		DataGridView dataGridView = sender as DataGridView;
@@ -1085,7 +880,6 @@ internal class Settings
 			mainForm.ShowHelp(helpId);
 		}
 	}
-
 	public static void smethod_53(object sender, KeyPressEventArgs e)
 	{
 		if (e.KeyChar >= '\0' && e.KeyChar <= '\u007f')
@@ -1098,11 +892,9 @@ internal class Settings
 			e.Handled = true;
 		}
 	}
-
 	public static void smethod_54(object sender, KeyPressEventArgs e)
 	{
 	}
-
 	public static void smethod_55(object sender, KeyPressEventArgs e)
 	{
 		if (!char.IsControl(e.KeyChar))
@@ -1119,7 +911,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static bool smethod_56(string string_0)
 	{
 		char[] array = string_0.ToCharArray();
@@ -1144,7 +935,6 @@ internal class Settings
 		}
 		return false;
 	}
-
 	public static void smethod_57(object sender, KeyPressEventArgs e)
 	{
 		if ("0123456789ABCD*#\b".IndexOf(char.ToUpper(e.KeyChar)) < 0 && e.KeyChar != '\b' && e.KeyChar != '.')
@@ -1154,7 +944,6 @@ internal class Settings
 			e.Handled = true;
 		}
 	}
-
 	public static void smethod_58(object sender, KeyPressEventArgs e)
 	{
 		if ("0123456789ABCDEF".IndexOf(char.ToUpper(e.KeyChar)) < 0 && e.KeyChar != '\b' && e.KeyChar != '.')
@@ -1163,7 +952,6 @@ internal class Settings
 			e.Handled = true;
 		}
 	}
-
 	public static void smethod_59(Control.ControlCollection controlCollection_0)
 	{
 		foreach (Control item in controlCollection_0)
@@ -1186,7 +974,6 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_60(object sender, EventArgs e)
 	{
 		Control control = sender as Control;
@@ -1197,7 +984,6 @@ internal class Settings
 			mainForm.ShowHelp(helpId);
 		}
 	}
-
 	public static byte[] objectToByteArray(object object_0, int int_0)
 	{
 		byte[] array = new byte[int_0];
@@ -1207,7 +993,6 @@ internal class Settings
 		Marshal.FreeHGlobal(intPtr);
 		return array;
 	}
-
 	public static object smethod_62(byte[] byte_0, Type type_0)
 	{
 		int num = Marshal.SizeOf(type_0);
@@ -1221,7 +1006,6 @@ internal class Settings
 		Marshal.FreeHGlobal(intPtr);
 		return result;
 	}
-
 	public static void smethod_63(string string_0)
 	{
 		FileStream fileStream = new FileStream(string_0, FileMode.Create);
@@ -1243,7 +1027,6 @@ internal class Settings
 		binaryFormatter.Serialize(fileStream, NormalScanForm.data);
 		fileStream.Close();
 	}
-
 	public static void smethod_64(string string_0)
 	{
 		FileStream fileStream = new FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -1265,7 +1048,6 @@ internal class Settings
 		NormalScanForm.data = (NormalScanForm.NormalScan)binaryFormatter.Deserialize(fileStream);
 		fileStream.Close();
 	}
-
 	public static QkGVc1MQ9NxKRGCTdE smethod_65<QkGVc1MQ9NxKRGCTdE>(QkGVc1MQ9NxKRGCTdE CeqCQcoTiZ0ZwY0OmE)
 	{
 		BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -1276,7 +1058,6 @@ internal class Settings
 		memoryStream.Close();
 		return result;
 	}
-
 	public static string smethod_66(string string_0)
 	{
 		if (Settings.dicCommon.ContainsKey(string_0))
@@ -1285,11 +1066,8 @@ internal class Settings
 		}
 		return "";
 	}
-
 	public static string smethod_67(string string_0)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		new Dictionary<string, string>();
 		string xpath = string.Format("/Resource/Settings/Item[@Id='{0}']", string_0);
 		try
@@ -1306,8 +1084,7 @@ internal class Settings
 		}
 		return "";
 	}
-
-	public static void smethod_68(Form form_0)
+	public static void UpdateComponentTextsFromLanguageXmlData(Form form_0)
 	{
 		new Dictionary<string, string>();
 		string xpath = string.Format("/Resource/{0}", form_0.Name);
@@ -1327,11 +1104,8 @@ internal class Settings
 			MessageBox.Show(ex.Message);
 		}
 	}
-
 	public static void smethod_69(List<Control> Db4kySLQw7tX1WlNpo, string string_0)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		Dictionary<string, string> dic = new Dictionary<string, string>();
 		string xpath = string.Format("/Resource/{0}/Controls/Control", string_0);
 		XmlNodeList xmlNodeList = _languageXML.SelectNodes(xpath);
@@ -1360,11 +1134,8 @@ internal class Settings
 			}
 		});
 	}
-
-	public static void smethod_70(List<ToolStripMenuItem> gku9yQXy4fa3WZdpnA, string string_0)
+	public static void UpdateContextMenuStripFromLanguageXmlData(List<ToolStripMenuItem> gku9yQXy4fa3WZdpnA, string string_0)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		Dictionary<string, string> dic = new Dictionary<string, string>();
 		string xpath = string.Format("/Resource/{0}/ContextMenuStrip/MenuItem", string_0);
 		XmlNodeList xmlNodeList = _languageXML.SelectNodes(xpath);
@@ -1382,11 +1153,8 @@ internal class Settings
 			}
 		});
 	}
-
-	public static void smethod_71(List<ToolStripItem> LE9oY1wrram2m8Ao56, string string_0)
+	public static void UpdateToolStripFromLanguageXmlData(List<ToolStripItem> LE9oY1wrram2m8Ao56, string string_0)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		Dictionary<string, string> dic = new Dictionary<string, string>();
 		string xpath = string.Format("/Resource/{0}/Controls/Control/ToolStripItem", string_0);
 		XmlNodeList xmlNodeList = _languageXML.SelectNodes(xpath);
@@ -1404,45 +1172,34 @@ internal class Settings
 			}
 		});
 	}
-
-	public static void smethod_72(Dictionary<string, string> I2YgnU9gqyioPitkyF)
+	public static void ReadCommonsTextIntoDictionary(Dictionary<string, string> dictionary)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		string xpath = string.Format("/Resource/Commons/Item");
 		XmlNodeList xmlNodeList = _languageXML.SelectNodes(xpath);
+		//dictionary.Clear();
 		foreach (XmlNode item in xmlNodeList)
 		{
 			string value = item.Attributes["Id"].Value;
 			string value2 = item.Attributes["Text"].Value;
-	        if (I2YgnU9gqyioPitkyF.ContainsKey(value))
+	        if (dictionary.ContainsKey(value))
 			{
-				I2YgnU9gqyioPitkyF[value] = value2;
+				dictionary[value] = value2;
 			}
 		}
 	}
-
-	public static void smethod_73(Dictionary<string, string> uxSTPFh3sq4yXxEkYo, string string_0)
+	public static void ReadCommonsForSectionIntoDictionary(Dictionary<string, string> dictionary, string sectionName)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
-		string xpath = string.Format("/Resource/{0}/Commons/Item", string_0);
+		string xpath = string.Format("/Resource/{0}/Commons/Item", sectionName);
 		XmlNodeList xmlNodeList = _languageXML.SelectNodes(xpath);
 		foreach (XmlNode item in xmlNodeList)
 		{
 			string value = item.Attributes["Id"].Value;
 			string value2 = item.Attributes["Text"].Value;
-			if (uxSTPFh3sq4yXxEkYo.ContainsKey(value))
-			{
-				uxSTPFh3sq4yXxEkYo[value] = value2;
-			}
+			dictionary[value] = value2;
 		}
 	}
-
 	public static void smethod_74(List<string[]> n2SR3VmEodXx385mq9, List<string> AMMonO7JcQ5lQDAuEr, string string_0)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		for (int i = 0; i < n2SR3VmEodXx385mq9.Count; i++)
 		{
 			string xpath = string.Format("/Resource/{0}/Commons/Item[@Id='{1}']", string_0, AMMonO7JcQ5lQDAuEr[i]);
@@ -1458,11 +1215,8 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_75(List<string> mTBilSHhIiS5P1HoGl, List<string> QaKAVsVaOpyU5FW5pp)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		for (int i = 0; i < mTBilSHhIiS5P1HoGl.Count; i++)
 		{
 			string xpath = string.Format("/Resource/Commons/Item[@Id='{0}']", QaKAVsVaOpyU5FW5pp[i]);
@@ -1473,11 +1227,8 @@ internal class Settings
 			}
 		}
 	}
-
 	public static void smethod_76(string string_0, ref string string_1)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		string xpath = string.Format("/Resource/Commons/Item[@Id='{0}' and @Text]", string_0);
 		XmlNode xmlNode = _languageXML.SelectSingleNode(xpath);
 		if (xmlNode != null)
@@ -1485,11 +1236,8 @@ internal class Settings
 			string_1 = xmlNode.Attributes["Text"].Value;
 		}
 	}
-
 	public static void smethod_77(string string_0, ref string string_1, string string_2)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		string xpath = string.Format("/Resource/{0}/Commons/Item[@Id='{1}' and @Text]", string_2, string_0);
 		XmlNode xmlNode = _languageXML.SelectSingleNode(xpath);
 		if (xmlNode != null)
@@ -1497,11 +1245,8 @@ internal class Settings
 			string_1 = xmlNode.Attributes["Text"].Value;
 		}
 	}
-
 	public static void smethod_78(string string_0, string[] string_1, string string_2)
 	{
-		//XmlDocument xmlDocument = new XmlDocument();
-		//xmlDocument.Load(Settings._003CLangXml_003Ek__BackingField);
 		string xpath = string.Format("/Resource/{0}/Commons/Item[@Id='{1}' and @Text]", string_2, string_0);
 		XmlNode xmlNode = _languageXML.SelectSingleNode(xpath);
 		if (xmlNode != null)
@@ -1514,10 +1259,9 @@ internal class Settings
 			}
 		}
 	}
-
 	public Settings()
 	{
-//		
+		
 	}
 
 	static Settings()
@@ -1575,28 +1319,37 @@ internal class Settings
 		Settings.SZ_PROMPT = "Prompt";
 		Settings.SZ_ERROR = "Error";
 		Settings.SZ_WARNING = "Warning";
+		Settings.SZ_NA = "N/A";
 
 
 		Settings.CUR_MODE = 2;// Roger Clark. Changed from 0 to 2 as this seems to be the Expert settings mode.
+
+		// These values are also set in MainForm.cs (belt and braces approach, probably not really needed in MainForm).
+
+		// Probably no reason to have 2 sets of settings.
+		// This set is used by the Channel and VFO screens
 		Settings.MIN_FREQ = new uint[2]
 		{
-			400u,
-			130u
+			380u,
+			127u
 		};
 		Settings.MAX_FREQ = new uint[2]
 		{
-			480u,
-			174u
+			564u,
+			282u
 		};
+
+		// Probably no reason to have 2 sets of settings.
+		// This set is used by the band limits
 		Settings.VALID_MIN_FREQ = new uint[2]
 		{
-			130u,
-			130u
+			380u,
+			127u
 		};
 		Settings.VALID_MAX_FREQ = new uint[2]
 		{
-			520u,
-			470u
+			564u,
+			178u
 		};
 		Settings.CUR_CH_GROUP = 0;
 		Settings.CUR_ZONE_GROUP = 0;
@@ -1667,6 +1420,5 @@ internal class Settings
 		Settings.ADDR_EX_EMERGENCY = 45424;
 		Settings.SPACE_EX_CH = ChannelForm.SPACE_CH_GROUP * 7;
 		Settings.ADDR_EX_CH = 45488;
-		Settings.dicCommon = new Dictionary<string, string>();
 	}
 }
